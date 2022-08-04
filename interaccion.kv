@@ -1,0 +1,133 @@
+<FormulacionWindow>:
+    orientation: 'vertical'
+    AccordionItem:
+        title: 'Ejercicios interactivos: ~ Métodos númericos'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 20
+                spacing: 20
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    text: '\n\n'
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]En esta sección se encuentra con algunos ejercicios interactivos  acerca de algebra lineal y también aplicaciones de ecuaciones diferenciales en cualquier orden.[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                MDLabel:
+                    text: '\n\n'
+                MDRaisedButton:
+                    text: "¡Algebra Lineal!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .4
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('exerciceopmat','next')
+                MDRaisedButton:
+                    text: "¡Ecuaciones diferenciales!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('apliEDO','next')
+                Image:
+                    source: 'imagenes/metodosnum.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(200) 
+    AccordionItem:
+        title: 'Ejercicios interactivos: ~ Señales'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 20
+                spacing: 20
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    text: '\n\n'
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]En esta sección el usuario puede experimentar con algunos ejercicios relacionados a Señales y sus clasificaciones. [/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                MDLabel:
+                    text: '\n\n'
+                MDRaisedButton:
+                    text: "¡Señales!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .4
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('exsenales','next')
+
+                Image:
+                    source: 'imagenes/señalesistemas.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(200) 
+
+                MDLabel:
+                    text: 'Al ser esta la primer versión offline de la aplicación móvil SimulaSS, solamente tiene contenido sobre Señales y sus clasificaciones en las cuales el usuario puede interactuar ingresando parametros modificando la ecuación principal o ya sea el valor de la muestra. \n\n'+'En la siguiente versión, el usuario se va a encontrar con ejercicios acerca de Sistemas, Sistemas LTI y Control Automatico. \n\n'+'Mientras tanto se trabaja duro para implementar información Sobre señales, sistemas y control, para que el usuario pueda afianzar sus conocimientos y no olvide la terminología importante que se maneja en estas asignaturas.'  
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]   
+
+    AccordionItem:
+        title: 'Interacción función Seno'
+        Grafica:
+      
+    AccordionItem:
+        title: '<---'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 20
+                spacing: 20
+                size_hint_y: None
+                height: self.minimum_height
+                Image:
+                    source: 'imagenes/home.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(50)
+                MDRaisedButton:
+                    text: "Inicio"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('index','previous')
+                MDRaisedButton:
+                    text: "Menú"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('menu','previous')

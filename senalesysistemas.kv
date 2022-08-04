@@ -1,0 +1,704 @@
+<SenalesySistemasScreen>
+    orientation: 'vertical'
+    AccordionItem:
+        title: 'Referencias'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=618450]Referencias[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'Para el desarrollo de esta sección, el autor se baso en algunas refeencias blbliograficas de gran soporte como lo son: \n\n'+'Señales y Sistemas segunda edición ~ Alan V. Oppenheim \n\n'+'La página Wiki 19E37 en el cual se encuentran algunos apuntes sobre matemáticas, señales y sistemas.\n\n'+'El blog de Señales y Sistemas este es un curso de Python el cual ofrece  una introducción a los conceptos generales de la representación de señales en sistemas continuos y discretos en el dominio del tiempo y frecuencia.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]   
+
+                MDLabel:
+                    text: 'Se plantean soluciones a través de software abierto para cálculo numérico y simbólico con Python y las librerías Sympy, Numpy y Scipy, a la par de cada tema y su solución analítica. Estos ejercicios son totalmente modificados para poder implementarlos en la aplicación móvil SimulaSS, dando uso del framework Kivy.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]   
+
+
+    AccordionItem:
+        title: 'Señales'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Señal[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: '       Una señal representa una variación cuantificable en el tiempo, esta esta denotada por la letra (t), la señal está cambiando constantemente, porque la información se ve perturbada en movimiento, no importa cuán lento o rápido, esto produce variación en la señal.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]   
+                Image:
+                    source: 'imagenes/señalpy.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(235)  
+
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Clasificación de Señales[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'Las señales se clasifican en las siguientes categorías:' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                MDLabel:
+                    text: '- Por su variable independeinte: Señales de tiempo continuo (t) y tiempo discreto [n] \n\n'+'- Por su modelo matemático: Señal determinista y aleatoria \n\n'+'- Por su reflejo en el tiempo (t) y [n]: Señales pares e impares \n\n'+'- Por su repetibilidad: Señal periódica y aperiódica'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                MDLabel:
+                    text: '\n' 
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Clasificación por su variable independiente[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: '\n' 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Señal en tiempo continuo x(t)[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Una señal en tiempo continuo x(t) es aquella en las cual su dominio puede expresarse en base al conjunto de los números reales, es decir ésta está específicada para cada valor real de tiempo (t). \n\n'+'Un ejemplo típico de una señal tiempo continuo es: x(t)=250sin(π40t).'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/señalcontpy.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(235)  
+                MDLabel:
+                    text: 'En la figura presentada, se observa una señal continua x(t)=250sin(4π40t), simulada a través del lenguaje de programación Python, en la sección ¡Ejercicios Interactivos! puedes variar la salida de la señal continua modificando los valores de x(t).'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Señal en tiempo discreto x[n][/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Las señales en tiempo discreto se representan como {x[n]}, donde n lo describimos como un numero entero llamados |s, debido a que esta variable se puede dar en casos de variables que sean conjuntos numerables o en su defecto tomar valores definidos en un intervalo dado.\n\n'+'Si t es una variable discreta, es decir, x [n] se define en tiempos discretos, solo tiene valores en una cantidad discreta de puntos y se identifica como una secuencia de números como se aprecia en la siguiente figura:'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/señaldiscpy.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(235)  
+                MDLabel:
+                    text: 'En la figura presentada, se observa una señal discreto estableciendo como muestras (m) m=50, y con una frecuencia angular (w) w=2π/12, la cual fue simulada a través del lenguaje de programación Python, en la sección ¡Ejercicios Interactivos! puedes variar la salida de la señal discreta modificando en número de muestras (m).'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Clasificación por su modelo matemático[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: '\n\n'
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Señal deterministica[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Una señal determinista es donde cuyo valor es predecible en cada instante del tiempo (t). Son aquellas cuyos valores están completamente especificados para cualquier instante del tiempo y pueden representarse mediante una fórmula cerrada, un conjunto de valores o una fórmula recursiva.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/señaldeterministicagra.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(200)  
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Señal aleatoria[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Una señal aleatoria es una señal que tiene mucha fluctuación, esto indica a que presenta incertidumbre en cada instante de tiempo y no se puede predecir con exactitud. Son aquellas en la que existe incertidumbre de sus valores en todos los instantes del tiempo y únicamente pueden ser caracterizadas estadísticamente. Todas las señales por naturaleza son de carácter aleatorio; sin embargo, existen algunas que por su regularidad, se pueden tratar como determinísticas, teniendo en cuenta ciertas restricciones y aproximaciones.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/señalaleatoriagra.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(200) 
+                MDLabel:
+                    text: '\n' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Clasificación por su reflejo en tiempo continuo (t) y tiempo discreto [n][/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Señal Par[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Una señal x(t) ó x[n] es par si se refleja en el eje vertical u ordenadas. ' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b]x(t)=x(−t)\n\n'+'x[n]=x[−n]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: '\n' 
+                Image:
+                    source: 'imagenes/señalpart.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(220) 
+
+                MDLabel:
+                    text: 'La señal tiene los mismos valores para el lado positivo o negativo de |t|. \n\n'+'Es como si se aplicara el valor absoluto de t antes de hacerlo en la ecuación.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+
+                MDLabel:
+                    text: '\n\n'
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Señal Impar[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Una señal x(t) ó x[n] es impar si se cumple que:' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b]x(t)=-x(−t)\n\n'+'x[n]=-x[−n]'
+                    font_name:'Arial'
+                    font_size: dp(16)'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Una señal impar debe ser necesariamente 0 en t=0 o n=0.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/señalpartt.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(220) 
+                MDLabel:
+                    text: '\n\n' 
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Clasificación por su repetitividad[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'Una señal periódica es una señal que puede encontrar patrones repetitivos. Es decir, después de un tiempo determinado, el valor anterior se repite una vez.  Una señal periódica continua x(t) tiene una característica de un valor positivo T donde: \n\n'+'x(t)=x(t+T) \n\n'+'En otras palabras, una señal periódica tiene la propiedad de que no cambia para un desplazamiento en de tiempo T. En este caso se dice que x(t) es periódica con periodo T.'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'La relación entre el período T y la frecuencia f viene dada por la siguiente ecuación:'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/ecuperiodo.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(130)
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Señal periodica en continuo (t)[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                Image:
+                    source: 'imagenes/señalpericont.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(250)
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Señal periodica en tiempo discreto [n][/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                Image:
+                    source: 'imagenes/señalperidisc.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(250)
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'Las instrucciones son semejantes a graficar señales contínuas. Para el ejemplo se analiza la señal coseno(t), con periodo T=2π para un en un intervalo de dos periodos m=2 y 51 muestras. Se crea el vector ti para el intervalo de observación y se calcula la señal. Se utilizan las librerías numpy y matplotlib para su desarrollo.'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'Si deseas ver e interactuar con estos ejercicios realizados con el lenguaje de programación Python, lo mejor será que des ¡Click Aquí!'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+
+                MDRaisedButton:
+                    text: "¡Click Aquí!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('exsenales','next')
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Funciones Singulares[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'Las funciones singulares son aquellas que tienen una representación matemática simple, la cual permite manipular  desde el punto de vista del calculo. Acá hablaremos acerca de la función impulso unitario y escalón unitario.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Impulso Unitario[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'La función de impulso unitario δ(t), cumple una función fundamental en el análisis de señales de sistemas, donde su duración en el tiempo es muy corta, tendiendo a cero y su amplitud se acerca a infinito, la cual en tiempo continuo se define como:'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/impuni.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(180)
+                MDLabel:
+                    text: 'Al desplazar la función de escalón unitario en u(t-t0), se puede definir como en t=0 y su valor es indefinido, se representa de la siguiente manera: '
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                Image:
+                    source: 'imagenes/deplzimpuni.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(180)
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Escalón Unitario[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'La función escalón unitario, es una función matemática la cual tiene como característica, tener un valor 0 para todos sus valores negativos 1 para todos sus valores positivos, la cual en tiempo continuo se define de la siguiene manera:'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/escuni.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(180)
+                MDLabel:
+                    text: 'Al desplazar la función de escalón unitario en u(t-t0), se puede definir como en t=0 y su valor es indefinido, quedando de la siguiente manera: '
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                Image:
+                    source: 'imagenes/dezescuni.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(180)
+                MDLabel:
+                    text: "\n\n"
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]        
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Para la siguiente versión de la aplicación móvil *SimulaSS*, el usuario podrá introducir sus propios parametros para variar la salida de cada señal.[/color][/ref][/b]'
+                    font_size: dp(12)
+    AccordionItem:
+        title: 'Sistemas'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Sistemas[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+
+                MDLabel:
+                    text: '      Un Sistema, básicamente es una interconexión entre componentes, transformando las señales que ingresan en dispositivos o módulos con parámetros de I/O, dando como resultado una o más señales de salida.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Image:
+                    source: 'imagenes/system.png' 
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(90)  
+                MDLabel:
+                    text: 'Un claro ejemplo en el cual se presenta la transformación de señales son los transductores de corriente, estos pertenecen al área de los sistemas de automatización y control donde su funcionamiento principal es transformar una magnitud física en una señal eléctrica y poder detectar magnitudes físicas como lo son:\n\n'+' - Temperatura (°C )\n\n'+'- Presión (P) \n\n'+'- Caudal de fluidos (Q)\n\n'+'Registrando estas respuestas en dispositivos de almacenamiento de datos, en la siguiente ilustración puede ver el funcionamiento de un transductor de corriente:'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Image:
+                    source: 'imagenes/transductor.png' 
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(135)  
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][i][color=506E84]Sistema en tiempo Continuo x(t) [/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+
+                MDLabel:
+                    text: 'Los sistema continuos, son aquellos tipos de sistemas en los que las señales de entrada y salida son las mismas en ambos extremos. En este tipo de sistema, las variables cambian con el tiempo y no se encuentra ningún tipo de variación en la señal de entrada y salida.\n\n'+' En respuesta a la señal de entrada, un sistema continuo genera una señal de salida.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Image:
+                    source: 'imagenes/syscont.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(120)  
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][i][color=506E84]Sistema en tiempo Discreto [n][/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+
+                MDLabel:
+                    text: 'En los sistemas discretos, tanto las señales de entrada como las de salida son señales discretas. Las variables en los sistemas discretos varían con el tiempo. En este tipo de sistema, los cambios son predominantemente discontinuos. El estado de las variables en un sistema discreto cambia solo en un conjunto discreto de puntos en el tiempo.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Image:
+                    source: 'imagenes/sysdisc.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(130)  
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '\n\n'
+                    font_size: dp(16)
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Propiedades de los Sistemas[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'Existen propiedades los cuales determinan los Sistemas fisicos, a continuación conocerá algunos con su interpretación matemática:' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]       
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Invertibilidad y sistemas inversos[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Un sistema es invertible si diferentes entradas producen diferentes salidas.\n\n'+'Como consecuencia, si un sistema es invertible, es posible conectarle otro sistema en serie a su salida de forma que la señal resultante del conjunto sea igual a la señal de entrada original.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Causabilidad[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Un sistema es causal si su salida en un determinado momento depende solamente de esa entrada en ese momento o momentos anteriores.También se conoce como sistemas no anticipados.\n\n'+' Matemáticamente, para que un sistema sea causal, y(t) no puede depender de x(t+t0).\n\n'+'Utilizamos sistemas no causales para el tratamiento de señales grabadas (tratamiento de imágenes, análisis bursátiles, etc.).'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Estabilidad[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Un sistema es estable si señales no divergentes ofrecen respuestas no divergentes, quiere decir, que una respuesta infinita en la salida no es generada por ningún valor finito de entrada.\n\n'+' Intuitivamente, un sistema es inestable si una entrada pequeña puede causar una salida cada vez más grande.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Invariancia en el tiempo[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Si el comportamiento de un sistema y sus parámetros no cambian en el tiempo, se los denomina sistemas invariantes en el tiempo.\n\n'+'Por ejemplo, para un circuito RC, los valores de la resistencia y capacitor fijos no varian si se realiza un experimento o medición hoy o mañana.\n\n'+'Expresando lo mismo como: \n\n'+'Un sistema es invariante en el tiempo si, ante un desplazamiento de tiempo en la señal de entrada, se ocasiona un desplazamiento en el tiempo en la señal de salida.\n\n'+'y(t) --> x(t) \n\n'+'y(t-t0) --> x(t-t0)'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Linealidad[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Un sistema es lineal si la suma ponderada de señales de entrada genera una salida que es la suma ponderada de las señales de salida que producirían cada una de las señales de entrada en solitario. Es decir, se cumple el principio de superposición. \n\n'+'Matemáticamente: \n\n'+'y(Ax1(t) + Bx2(t)) = Ay(x1(t)) + By(x2(t)) \n\n'+'El principio de superposición se puede descomponer en dos propiedades: homogeneidad y superposición. \n\n'+'Para comprobar si un sistema es lineal: \n\n'+'* Comprobamos la homogeneidad: \n\n'+'-Creamos una señal x1(t) = A·x(t)\n\n'+'-Calculamos y1(t) sustituyendo la señal x(t) por x1(t).\n\n'+'-Calculamos A·y(t)\n\n'+'-Si son iguales, el sistema es homogeneo.\n\n'+'*Comprobamos la superposición:\n\n'+'-Creamos una señal x3(t) = x1(t) + x2(t)\n\n'+'-Calculamos y3(t) sustituyendo la señal x(t) por x1(t) + x2(t).\n\n'+'-Calculamos y1(t) + y2(t)\n\n'+'-Si son iguales, el sistema cumple la superposición.\n\n'+'*Si cumple ambas propiedades, es lineal'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+
+                MDRaisedButton:
+                    text: "Ejercicio demostrativo"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('exsistemas','next')
+
+    AccordionItem:
+        title: '<---'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                Image:
+                    source: 'imagenes/home.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(50)
+                MDRaisedButton:
+                    text: "Inicio"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('index','previous')
+                MDRaisedButton:
+                    text: "Menú"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('menu','previous')
+                Image:
+                    source: 'imagenes/señalesistemas.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(180) 

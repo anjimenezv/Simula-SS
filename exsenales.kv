@@ -1,0 +1,423 @@
+<ExSenales>:
+    orientation: 'vertical'
+    AccordionItem:
+        title: 'Clasificación por su variable independiente'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDGridLayout:
+                id: ejercicio_demostrativo_signal_discont
+                spacing: dp(20)
+                size_hint_y: None
+                height: self.minimum_height
+                rows_minimum: {0: dp(5), 1: dp(200), 2: dp(250), 3: dp(30), 4: dp(200), 5: dp(5), 6: dp(5), 7: dp(5), 8: dp(3), 9: dp(0), 10: dp(5), 11: dp(200), 12: dp(250), 13: dp(30), 14: dp(70), 15: dp(5), 16: dp(3), 17: dp(0)}
+                padding: dp(20), dp(20)
+                cols: 1
+                # 0
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Señal en tiempo continuo x(t)[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 1
+                MDLabel:
+                    text: 'Para simular una señal en tiempo continuo en el lenguaje de programación Python, debemos estar familiarizados con las librerías NumPy y Matplotlib para llegar a un desarrollo optimo, se tiene en cuenta el arreglo de vectores, el cual el tiempo (t), está en milisegundos. \n\n'+'Se usa la función plt.plot() para mostrar la gráfica la cual se desea llegar, al no hacerlo el código devuelve el resultado en forma de texto.'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 2
+                Image:
+                    source: 'imagenes/señalcontpy.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 3
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ejercicio Interactivo[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 4
+                MDLabel:
+                    text: 'El usuario puede cambiar los parámetros de la gráficas, en base a la siguiente ecuación: \n\n'+'x(t)= 250sin(4π40t) \n\n'+'donde 250 = primer parámetro, 4 = segundo parámetro y 40 tercer parámetro de la siguiente función en tiempo continuo y genera tu propia grafica para sacar tus respectivos análisis:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 5
+                MDTextField:
+                    id: var_signal
+                    hint_text: "Ingrese el primer parametro:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 6
+                MDTextField:
+                    id: var_signala
+                    hint_text: "Ingrese el segundo parametro:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 7
+                MDTextField:
+                    id: var_signalb
+                    hint_text: "Ingrese el tercer parametro:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 8
+                MDRaisedButton:
+                    text: "¡Graficar!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    on_release:
+                        root.ejercicio_demostrativo_signal_cont(var_signal, var_signala, var_signalb)
+                # 9
+                Widget:
+                # 10
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '\n[b][color=506E84]Señal en tiempo discreto x[n] [/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 11
+                MDLabel:
+                    text: 'Para simular una señal en tiempo continuo en el lenguaje de programación Python, debemos estar familiarizados con las librerías NumPy y Matplotlib para llegar a un desarrollo optimo, se tiene en cuenta el arreglo de vectores, el cual el tiempo (t), está en milisegundos.  \n\n'+'Se usa la función plt.plot()y plt.stem(), para mostrar la gráfica la cual se desea llegar, al no hacerlo el código devuelve el resultado en forma de texto.'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 12
+                Image:
+                    source: 'imagenes/señaldiscpy.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 13
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ejercicio Interactivo[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 14
+                MDLabel:
+                    text: 'El usuario puede cambiar el parámetros de la gráficas, cambiando el número de muestras de la siguiente función en tiempo discreto y genera tu propia grafica para sacar tus respectivos análisis:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 15
+                MDTextField:
+                    id: var_muestra
+                    hint_text: "Ingrese la nueva muestra:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 16
+                MDRaisedButton:
+                    text: "¡Graficar!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.4}
+                    size_hint_x: .3
+                    on_release:
+                        root.ejercicio_demostrativo_signal_disc(var_muestra)
+                # 17
+                Widget:
+    AccordionItem:
+        title: 'Clasificación por su reflejo en tiempo x(t) y x[n]'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDGridLayout:
+                id: ejercicio_demostrativo_senal_par
+                spacing: dp(30)
+                size_hint_y: None
+                height: self.minimum_height
+                rows_minimum: {0: dp(30), 1: dp(50), 2: dp(30), 3: dp(300), 4: dp(250), 5: dp(200), 6: dp(30), 7: dp(5), 8: dp(3), 9: dp(0), 10: dp(30), 11: dp(70), 12: dp(250), 13: dp(30), 14: dp(5), 15: dp(3), 16: dp(0)}
+                padding: dp(30), dp(30)
+                cols: 1
+                # 0
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Clasificación por su reflejo en tiempo x(t) y x[n][/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 1
+                MDLabel:
+                    text: 'Para graficar una señal par e impar en el lenguaje de programación Python, se debe implementar dos librerías de suma importancia como lo son NumPy y matplotlib junto a los módulos que ofrece. '
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 2
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ejercicio interactivo de Señal Par[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 3
+                MDLabel:
+                    text: 'Un señal par conocida es cos(t). Es por eso que en este ejercicio de simulación de una señal par de inicializa con los siguientes parametros: \n\n'+'El periodo T de una señal, en este caso 2*np.pi.\n\n'+'El número m de periodos que se observarán de la señal, donde m debe ser un número par, aca el usuario ingresa el parametro para variar el número de muestras de la señal.\n\n'+'El punto de inicio t0 para el eje horizontal se puede calcular a partir de T y m, dado que se extiende hacia cada lado del eje vertical, t0 al encontrarse a la izquierda del eje vertical tiene signo negativo.\n\n'+'El punto de final tn para tendrá el signo positivo de t0\n\n'+'Los tramos por periodo de la señal a observar, deben ser un número 2k, donde k es un número entero.'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 4
+                Image:
+                    source: 'imagenes/señalpart.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 5
+                MDLabel:
+                    text: 'Para observar mejor la gráfica, se marcará el área que genera la señal dentro de un periodo centrado en el origen.\n\n'+'La cantidad de muestras depende de cúantos periodos m de la señal se quieran observar. Se necesitan tantas muestras como tramos de cada lado, incluuendo la muestra del origen (m*tramos+1).\n\n'+'Se marca un periodo comprendido en: [-T/2,T/2], sombreando alrededor de t=0. Para destacar el eje vertical se usa el color azul.'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 6
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Cambia los parametros de la muestra y saca tus analisis![/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 7
+                MDTextField:
+                    id: var_m
+                    hint_text: "Ingrese la nueva muestra:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 8
+                MDRaisedButton:
+                    text: "¡Graficar!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.4}
+                    size_hint_x: .3
+                    on_release:
+                        root.ejercicio_demostrativo_senal_par(var_m)
+                # 9
+                Widget:
+                # 10
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '\n[b][color=506E84]Ejercicio interactivo de Señal impar[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 11
+                MDLabel:
+                    text: 'En el ejemplo se usará una señal impar como lo es sin(). Se utiliza las instrucciones del algoritmo anterior, modificando la señal f(x) en el bloque de ingreso. \n\n'+'Siendo f(x)=lambda t: np.sin(w*t). \n\n'+'Para destacar el eje vertical se usa el color azul'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 12
+                Image:
+                    source: 'imagenes/señalpartt.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 13
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ejercicio Interactivo[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 14
+                MDTextField:
+                    id: var_m_2
+                    hint_text: "Ingrese la nueva muestra:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 15
+                MDRaisedButton:
+                    text: "¡Graficar!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.4}
+                    size_hint_x: .3
+                    on_release:
+                        root.ejercicio_demostrativo_senal_impar(var_m_2)
+                # 16
+                Widget:
+                
+    AccordionItem:
+        title: 'Clasificación por su repetitividad'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDGridLayout:
+                id: ejercicio_demostrativo_periodica_discrecontinua
+                spacing: dp(30)
+                size_hint_y: None
+                height: self.minimum_height
+                rows_minimum: {0: dp(30), 1: dp(70), 2: dp(30), 3: dp(70), 4: dp(250), 5: dp(40), 6: dp(60), 7: dp(5), 8: dp(3), 9: dp(0), 10: dp(30), 11: dp(70), 12: dp(250), 13: dp(30), 14: dp(5), 15: dp(3), 16: dp(250)}
+                padding: dp(30), dp(30)
+                cols: 1
+                # 0
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Señal periodica continua x(t)[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 1
+                MDLabel:
+                    text: 'Una señal periódica contínua tiene la propiedad que su valor se repite luego de un desplazamiento de tiempo T. \n\n'+'x(t) = x(t+T)x(t)=x(t+T)'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 2
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ejercicio interactivo de Señal periodica continua[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 3
+                MDLabel:
+                    text: 'Las instrucciones son semejantes a graficar señales contínuas. Para el ejemplo se analiza la señal coseno(t), con periodo T=2π para un en un intervalo de dos periodos m=2 y 51 muestras. Se crea el vector ti para el intervalo de observación y se calcula la señal.'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 4
+                Image:
+                    source: 'imagenes/señalpericont.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 5
+                MDLabel:
+                    text: 'La gráfica se conforma de dos partes:\n\n'+'La señal calculada\n\n'+'La señal marcada en un periodo'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 6
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Cambia los parametros de la muestra y saca tus analisis![/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 7
+                MDTextField:
+                    id: var_m_3
+                    hint_text: "Ingrese la nueva muestra:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 8
+                MDRaisedButton:
+                    text: "¡Graficar!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.4}
+                    size_hint_x: .3
+                    on_release:
+                        root.ejercicio_demostrativo_periodica_continua(var_m_3)
+                # 9
+                Widget:
+                # 10
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Señal periodica discreta x[n] [/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 11
+                MDLabel:
+                    text: 'Se define semejante a las señales periódicas contínuas como una secuencia discreta en el tiempo x[n].  \n\n'+'Semejante al algoritmo del ejercicio anterior, se genera la nueva gráfica en forma discreta.'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 12
+                Image:
+                    source: 'imagenes/señalperidisc.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 13
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ejercicio Interactivo[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 14
+                MDTextField:
+                    id: var_m_4
+                    hint_text: "Ingrese la nueva muestra:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 15
+                MDRaisedButton:
+                    text: "¡Graficar!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.4}
+                    size_hint_x: .3
+                    on_release:
+                        root.ejercicio_demostrativo_periodica_discreta(var_m_4)
+                # 16
+                Widget:
+
+    AccordionItem:
+        title: '<---'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 20
+                spacing: 20
+                size_hint_y: None
+                height: self.minimum_height
+                Image:
+                    source: 'imagenes/home.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(50)
+                MDRaisedButton:
+                    text: "Inicio"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('index','previous')
+                MDRaisedButton:
+                    text: "Volver"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('submenusenales','previous')
+                MDRaisedButton:
+                    text: "Menú"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('menu','previous')

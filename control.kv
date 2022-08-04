@@ -1,0 +1,367 @@
+<SubmenucontrolWindow>
+    orientation: 'vertical'
+    AccordionItem:
+        title: 'Sistemas de Control'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Sistemas de Control[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'Un sistema de control es un sistema de control automático, donde las variables de salida se comportan según las órdenes dadas por las variables de entrada.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                MDLabel:
+                    text: 'Básicamente, un sistema de control es una combinación de varios elementos conectados como una unidad para dirigirse o regularse a sí mismo o cualquier otro sistema con el fin de proporcionar una salida específica. Entonces, el sistema de control se usa para dirigir el funcionamiento de un sistema físico para llevar a cabo el objetivo deseado.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/control.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(180)  
+                MDLabel:
+                    text: 'Los sistemas de control se encuentran en gran cantidad, en diferentes sectores como lo es los sistemas robóticos, sistemas de vehículos espaciales, en los procesos industriales el cual requiera el control de temperatura, presión, humedad, flujo, etc. Antes de continuar con el análisis de los sistemas de control se deben tener claras algunas definiciones como lo es: planta, proceso, variables controladas, control retroalimentado, etc (Ogata).' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]   
+                MDLabel:
+                    text: '\n\n'
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Conceptos y términos básicos de un Sistema de Control[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: '\n\n'
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][i][color=506E84]Variable controlada[/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'La variable controlada es un parámetro importante del proceso ya que esta es la cantidad o condición que se mide y controla, manteniéndola estable (sin variación), pues su variación modificaría las condiciones que requiere el sistema.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][i][color=506E84]Señal de control o variable manipulada[/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'La señal de control o variable manipulada como también es llamada, es la cantidad que el controlador modifica para afectar el valor de la salida del sistema. ' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84] Planta [/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'La Planta es el elemento físico que requiere ser controlado, un ejemplo pueden ser un horno, aire acondicionado, un motor, un sistema de navegación, etc.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Proceso[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'El proceso de control es un lazo diseñado para mantener la variable controlada en el set point. Algunos procesos son los procesos químicos, económicos y biológicos. '
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Sistema[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+
+                MDLabel:
+                    text: 'Los sistemas no son solamente físicos tal cual se mencionó anteriormente, este concepto de sistemas se aplica en fenómenos abstractos y dinámicos, los cuales se encuentran en la economía. Entonces, el concepto Sistema tiene una amplia definición el cual comprenda sistemas físicos, biológicos y económicos. '
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Perturbaciones[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Una perturbación es una señal la cual puede afectar negativamente el valor de la salida de un sistema. Si la perturbación se genera dentro del sistema se la denomina interna, mientras que una perturbación externa se genera fuera del sistema y constituye una entrada.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Control retroalimentado[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'El control realimentado se refiere a una operación que, en presenciade perturbaciones, tiende a reducir la diferencia entre la salida de un sistema y alguna entrada de referencia. Debe destacarse lo esencial de la realimentación, que consiste en tomar el resultado obtenido de controlar para decidir la acción de control.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    text: '\n\n'
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Elementos de un Sistema de Control[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'El sistema de control va a actuar independiente del operario y va a determinar por sí mismo los mejores valores para las señales de control. Para ello se contará con una referencia, que es un valor dado por el operario, este valor es fijo y depende del tipo de proceso y de las exigencias que este amerite; es conocido como set-point, este valor es el que se desea alcanzar y mantener.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/siscontrol.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(180) 
+
+
+
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Controlador[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Un controlador es básicamente una unidad presente en un sistema de control que genera señales de control para reducir la desviación del valor real del valor deseado a casi cero o al valor más bajo posible. Es responsable de la acción de control del sistema para obtener una salida precisa.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Actuadores[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Un actuador es un dispositivo mecánico o electromecánico que convierte la energía de una señal de control en movimiento mecánico. En términos más simples, un actuador es un dispositivo que permite un movimiento o posicionamiento controlado.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Proceso o Planta[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'buscar inf'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Sensor[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Un Sensor es un dispositivo que convierte un estímulo o entrada física en una salida legible, la cual puede ser preferiblemente electronica, pero también puede ser comunicada a través de otros medios, tales como visuales y acústicos.Como quizás el más simple ejemplo, considere el sensor en un actuador de interruptor de teclado, que proporciona una señal, cuando se presiona la tecla asociada. El sensor del interruptor del teclado tiene varios deseables caracteristicas. Es económico, tiene una alta relación señal-ruido (su relación de impedancia de encendido/apagado), es compacto y tiene un bajo consumo de energía. Su fiabilidad y capacidad de funcionamiento.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    text: '\n\n'
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Tipos de un Sistema de Control[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Sistema de Control de lazo abierto[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Un sistema de lazo abierto es un tipo de sistema de control en el que la salida del sistema depende de la entrada pero la entrada o el controlador es independiente de la salida del sistema. Estos sistemas no contienen ningún circuito de retroalimentación y, por lo tanto, también se conocen como sistemas sin retroalimentación. \n\n'+'Un sistema de control a lazo abierto utiliza un dispostivo de actuación para controlar el proceso directamente sin emplear realimentación. \n\n'+'El siguiente es un ejemplo base tomado de internet para realizar una ilustración facilmente entendible sobre un sistema en lazo abierto'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Image:
+                    source: 'imagenes/lazoabierto.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(235)  
+                MDLabel:
+                    text: 'Otros ejemplos de siestemas en lazo abierto son: \n\n'+'Tostador de pan: esta máquina funciona según el tiempo ajustado, independientemente de si el tostado se completó o no. \n\n'+'Interruptor de luz: las lámparas brillan cuando el interruptor de luz está encendido, independientemente de si se requiere luz o no. \n\n'+'Volumen en el sistema estéreo: el volumen se ajusta manualmente independientemente del nivel de volumen de salida.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Sistema de Control de lazo cerrado [/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Los sistemas de control en los que la salida tiene un efecto sobre la cantidad de entrada de tal manera que la cantidad de entrada se ajustará en función de la salida generada se denomina sistema de control de circuito cerrado. \n\n'+'Un sistema de control de lazo abierto se puede convertir en un sistema de control de lazo cerrado proporcionando retroalimentación. Esta retroalimentación realiza automáticamente cambios adecuados en la salida debido a perturbaciones externas.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/lazocerrado.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(235)  
+                MDLabel:
+                    text: 'Otros ejemplos de sistemas en lazo cerrado son: \n\n'+'Plancha eléctrica automática: los elementos calefactores se controlan mediante la temperatura de salida de la plancha. \n\n'+'Estabilizador de voltaje servo: el controlador de voltaje funciona según el voltaje de salida del sistema. \n\n'+'Un aire acondicionado: un acondicionador de aire funciona según la temperatura de la habitación.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+    AccordionItem:
+        title: 'Video control PID'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDGridLayout:
+                spacing: dp(30)
+                size_hint_y: None
+                height: self.minimum_height
+                rows_minimum: {0: dp(5), 1: dp(360)}
+                padding: dp(30), dp(30)
+                cols: 1
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Pendulo invertido[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                VideoPlayer:
+                    source: 'videos/pendulo_invertido.mp4'
+                    options: {'allow_stretch': True}
+
+
+    AccordionItem:
+        title: '<---'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                Image:
+                    source: 'imagenes/home.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(50)
+                MDRaisedButton:
+                    text: "Inicio"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('index','previous')
+                MDRaisedButton:
+                    text: "Menú"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('menu','previous')
+                Image:
+                    source: 'imagenes/siscontrol.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(180) 

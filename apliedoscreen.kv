@@ -1,0 +1,504 @@
+<ApliEDOScreen>:
+    orientation: 'vertical'
+    AccordionItem:
+        title: 'Ejercicios EDO de forma convencional y con Python'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ecuaciones diferenciales ordinarias[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=5D9318]1er Ejercicio:[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                Image:
+                    source: 'imagenes/ecuejeuno.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(45)
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=5D9318]Solución[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                Image:
+                    source: 'imagenes/ecufrist.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(250)
+
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=5D9318]2do Ejercicio:[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+
+                Image:
+                    source: 'imagenes/ecuejedos.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(35)
+
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=5D9318]Solución[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                Image:
+                    source: 'imagenes/ecusecond.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(160)
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ecuaciones diferenciales ordinarias con Python[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'Sympy es una librería de cálculo simbólico perteneciente a Python se importa usando el comando from sympy import Eq, dsolve, init_printing, symbols, Function. Dando uso de esta librería junto a sus módulos se resuelven ecuaciones diferenciales ordinarias para describir de forma matemática los sistemas físicos en el dominio del tiempo, también matplotlib y numpy son de gran importancia para su solución. Resolviendo los ejercicios anteriores, utilizando Python, quedaría de la siguiente manera:'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=5D9318]Para ver los ejercicios oprima los botones![/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDRaisedButton:
+                    text: "1er ejercicio con Python"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        root.ejercicio_demostrativo('ejercicio_demostrativo_edo')
+                MDLabel:
+                    id: ejercicio_demostrativo_edo
+                    text: ''
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    markup: True
+                MDRaisedButton:
+                    text: "2do ejercicio con Python"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        root.ejercicio_demostrativo('ejercicio_demostrativo_edo_2')
+                MDLabel:
+                    id: ejercicio_demostrativo_edo_2
+                    text: ''
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    markup: True
+    AccordionItem:
+        title: 'Simulación Sistema masa-resorte-amortiguación'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDGridLayout:
+                id: ejercicio_demostrativo_masa
+                spacing: dp(30)
+                size_hint_y: None
+                height: self.minimum_height
+                rows_minimum: {0: dp(30), 1: dp(50), 2: dp(250), 3: dp(5), 4: dp(120), 5: dp(70), 6: dp(100), 7: dp(150), 8: dp(5), 9: dp(5), 10: dp(5), 11: dp(5), 12: dp(120), 13: dp(5), 14: dp(120), 15: dp(30), 16: dp(250), 17: dp(5), 18: dp(5), 19: dp(5), 20: dp(5), 21: dp(5), 22: dp(3), 23: dp(0)}
+                padding: dp(20), dp(20)
+                cols: 1
+                # 0
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Sistema masa resorte amortiguación[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 1
+                MDLabel:
+                    text: 'El sistema masa resorte amortiguación, es un sistema típico utilizado para demostrar e ilustrar modelado y simulación. Es por eso que en esta sección encuentras una explicación mas detallada sobre este caso, también puedes realizar una simulación de la velocidad con respecto al tiempo implementando tus propios datos. '
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 2
+                Image:
+                    source: 'imagenes/sismasaresorte.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 3
+                MDLabel:
+                    text: 'El sistema masa-resorte-amortiguación, se describe mediante la siguiente ecuación:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+               # 4
+                Image:
+                    source: 'imagenes/ecusismasaresorte.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 5
+                MDLabel:
+                    text: 'Donde (t) es el tiempo, F(t) es una fuerza externa aplicada al sistema, c es la constante de amortiguamiento, k es la rigidez del resorte y m es la masa.\n\n'+'x(t) Es la posición de la masa m.\n\n'+'x(t) Es la primera derivada de la posición.\n\n'+'x (t) Es la segunda derivada de la posición, la cual es igual a la aceleración de la masa m.'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 6
+                MDLabel:
+                    text: 'Las ecuaciones diferenciales de orden superior normalmente se pueden reformular en un sistema de ecuaciones diferenciales de primer orden, quedando de la siguiente manera:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 7
+                Image:
+                    source: 'imagenes/recuacionmasaresorte.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 8
+                MDLabel:
+                    text: 'Se establece:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 9
+                MDLabel:
+                    text: 'x = x1 --> x1 = posición.\n\n'+'x = x2 --> x2 = velocidad'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 10
+                MDLabel:
+                    text: 'Y con lo anterior conseguimos:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 11
+                MDLabel:
+                    text: 'x1 = x2'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 12
+                Image:
+                    source: 'imagenes/ecusismasaresortex.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 13
+                MDLabel:
+                    text: 'Finalmente:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 14
+                Image:
+                    source: 'imagenes/ecusismasaresortefinal.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 15
+                MDLabel:
+                    text: 'Al implementar este ejercicio en Python e incluir valores aleatorios del tiempo(t), resorte (k), fuerza externa aplicada F(t) y amortiguación (c), se obtiene la siguiente grafica:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 16
+                Image:
+                    source: 'imagenes/ecusismasaresortesimu.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 17
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ejercicio interactivo[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 18
+                MDTextField:
+                    id: var_c_1
+                    hint_text: "Ingrese los valores de la amortiguación C: "
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 19
+                MDTextField:
+                    id: var_k
+                    hint_text: "Ingrese los valores de la constante del resorte K: "
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 20
+                MDTextField:
+                    id: var_m
+                    hint_text: "Ingrese los valores de la masa m: "
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 21
+                MDTextField:
+                    id: var_f
+                    hint_text: "Ingrese los valores de la Fuerza externa aplicada F: "
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 22
+                MDRaisedButton:
+                    text: "Generar Grafico"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    on_release:
+                        root.ejercicio_demostrativo_masa(var_c_1, var_k, var_m, var_f)
+                # 23
+                Widget:
+    AccordionItem:
+        title: 'Circuito RLC de forma convencional y con Python'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDGridLayout:
+                id: ejercicio_demostrativo_circuito
+                spacing: dp(30)
+                size_hint_y: None
+                height: self.minimum_height
+                rows_minimum: {0: dp(5), 1: dp(70), 2: dp(250), 3: dp(70), 4: dp(5), 5: dp(70), 6: dp(250), 7: dp(30), 8: dp(70), 9: dp(30), 10: dp(70), 11: dp(30), 12: dp(5), 13: dp(5), 14: dp(5), 15: dp(3), 16: dp(0), 17: dp(0), 18: dp(0), 19: dp(0)}
+                padding: dp(30), dp(30)
+                cols: 1
+                # 0
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Circuito RLC[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 1
+                MDLabel:
+                    text: 'El Circuito RLC en serie consiste de una fuente de entrada, una resistencia R, un inductor L y un condensador C, se desea encontrar la ecuación diferencial la cual permita calcular la carga en el circuito como la corriente que fluye por el circuito. '
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 2
+                Image:
+                    source: 'imagenes/circuitorlc.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 3
+                MDLabel:
+                    text: 'Para dar resolución a este ejercicio se deben usar algunas leyes las cuales surgen de la física, como lo es la Ley de tensiones de Kirchhoff y básicamente esta ley nos indica que si se suman las caídas de voltajes de los elementos (RLC), entonces esa suma debe ser igual al voltaje el cual se le está suministrando al circuito, se puede expresar de la siguiente manera:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 4
+                MDLabel:
+                    text: 'VR+VL+VC=E(t)'
+                    text_size: self.width, None
+                    halign: "center"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 5
+                MDLabel:
+                    text: 'La ley de Kirchhoff es la que vamos a emplear para resolver el ejercicio genérico y para eso damos inicio calculando cada uno de los voltajes que se tiene por cada elemento. \n\n'+'Para solucionar cada voltaje se emplea la Ley de Ohm, la cual es muy importante ya que esta relaciona el voltaje, la corriente y la resistencia, la cual nos indica lo siguiente:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 6
+                Image:
+                    source: 'imagenes/leyohm.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                # 7
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=5D9318]VR(t)=R.i(t)[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 8
+                MDLabel:
+                    text: 'La ley de Ohm como lo indica la ecuación, nos dice que el voltaje en la resistencia VR(t) es igual al producto de la Resistencia R por la corriente que fluye por cada elemento. \n\n'+'También se puede expresar la Ley de Ohm de una forma equivalente, para asimismo expresarlas en forma de ecuación diferencial, utilizando la carga (q) en lugar de la corriente (i), para eso debemos recordar cual es la derivada de la corriente (i) y esta se expresa de la siguiente manera: '
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 9
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Circuito RLC con Python[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                # 10
+                MDLabel:
+                    text: 'Para realizar una simulación de un Circuito RLC en el lenguaje de programación Python, en este algoritmo se emplean las librerias numpy y matplotlib.En el cual se aprecia la salida de la corriente y el voltaje del circuito RLC. \n\n'+'A continuación el usuario puede ingresar los parametros de resistencia [R], inductancia [L] y capacitancia [C]:'
+                    text_size: self.width, None
+                    halign: "left"
+                    font_name:'Arial'
+                    font_size: dp(14)
+                # 11
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ejercicio Interactivo[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                # 12
+                MDTextField:
+                    id: var_r
+                    hint_text: "Ingrese el valor de la resitencia [R]:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 13
+                MDTextField:
+                    id: var_l
+                    hint_text: "Ingrese el valor de la inductancia [L]:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 14
+                MDTextField:
+                    id: var_c_2
+                    hint_text: "Ingrese el valor de al capacitancia [C]:"
+                    mode: "rectangle"
+                    required: True
+                    helper_text: "Este campo es requerido"
+                    on_text_validate: root.validate_number(self)
+                # 15
+                MDRaisedButton:
+                    text: "¡Graficar!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    on_release:
+                        root.ejercicio_demostrativo_circuito(var_r, var_l, var_c_2)
+                # 16
+                Widget:
+                # 17
+                Widget:
+                # 18
+                Widget:
+                # 19
+                Widget:
+    AccordionItem:
+        title: 'Grafica de Batman'
+        orientation: "vertical"
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDGridLayout:
+                spacing: dp(30)
+                size_hint_y: None
+                height: self.minimum_height
+                rows_minimum: {0: dp(5), 1: dp(30), 2: dp(0)}
+                padding: dp(30), dp(30)
+                cols: 1
+                id: ejercicio_demostrativo_batman
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][i][color=506E84]Ecuación de Batman[/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'En la siguiente figura se observa la bati-señal realizada en el lenguaje de programación Python, dando uso de las librerías NumPy y principalmente Matplotlib. Se implementa en la aplicación SimulaSS con unos cuantos cambios a la bati-señal original perteneciente a la funte de internet.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Widget:
+    AccordionItem:
+        title: '<---'
+        ScrollView:
+
+
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 20
+                spacing: 20
+                size_hint_y: None
+                height: self.minimum_height
+                Image:
+                    source: 'imagenes/home.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(50)
+                MDRaisedButton:
+                    text: "Inicio"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('index','previous')
+                MDRaisedButton:
+                    text: "Volver"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('submenuecudifalglin','previous')
+                MDRaisedButton:
+                    text: "Menú"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('menu','previous')

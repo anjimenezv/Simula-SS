@@ -1,0 +1,371 @@
+<SmalgyecuScreen>:
+    orientation: 'vertical'
+    AccordionItem:
+        title: 'Algebra Lineal'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Repasos de Algebra Lineal[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'El Algebra Lineal, es una herramienta fundamental para las matemáticas, donde sus elementos son: Vectores, Matrices, determinates y raiz. Para entender las señales y sistemas de control, se deben tener algunas bases fundamentales sobre Algebra Lineal, por lo que en esta primer versión de la aplicación móvil se aborda un tema importante el cuales son las operaciones matriciales.'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                Image:
+                    source: 'imagenes/matrices.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(200)
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Operaciones matriciales[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: "Antes que todo cabe mencionar qué es una matriz. Una matriz es una forma rectangular donde se ordenan los números reales mediante coordenadas reflejadas en los subíndices."
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                MDLabel:
+                    text: 'La dimensión de una matriz se representa como la multiplicación de la dimensión de la fila con la dimensión de la columna. Denominamos (m) para la dimensión de las filas y (n) para la dimensión de las columnas. Entonces, una matriz mxn tendrá m filas y n columnas.'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][i][color=506E84]Igualdad de matrices[/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Dos matrices son iguales cuando tienen la misma dimensión y los elementos que ocupan el mismo lugar en ambas son iguales. Como se aprecia en la siguiente figura:'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Image:
+                    source: 'imagenes/igualdadmatriz.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(100)
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][i][color=506E84]Suma y resta de matrices[/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Para sumar o restar matrices, deben tener el mismo número de filas (m) y columnas (n). \n\n'+'Sea:'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Image:
+                    size_hint_y: None
+                    height: dp(320)
+                    source: 'imagenes/sumatriza.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Multiplicación de matrices[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text: 'Para poder multiplicar dos matrices, la primera debe tener el mismo número de columnas que filas la segunda. La matriz resultante del producto quedará con el mismo número de filas de la primera y con el mismo número de columnas de la segunda.'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    text: "Cabe recalcar, que para relizar ejercicios basicos de operaciones matriciales en Python, se debe implementar la librería NumPy, la cual ofrece el modulo np.array para crear arrays multidimensionales de tipo: boleano,entero, flotante y complejos.\n\n"+"No olvides que en la siguiente versión de SimulaSS llegará con mas información sobre algebra lineal enfocado precisamente en Señales, Sistems y Control."
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    text: 'Si deseas ver e interactuar con estos ejercicios realizados con el lenguaje de programación Python, lo mejor será que des ¡Click Aquí!'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDRaisedButton:
+                    text: "¡Click Aquí!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .4
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('exerciceopmat','next') 
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Continua experimentando toda la información que puede brindarte SimulaSS![/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+    AccordionItem:
+        title: 'Ecuaciones Diferenciales'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Ecuaciones diferenciales ordinarias[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: "En esta sección, puedes encontrar un tema muy importante para describir Señales y Sistemas y es gracias a las ecuaciones diferenciales. \n\n"+"Recuerde que el contenido de esta aplicación no pretende reemplazar o ser muy provechoso en contenido como en aquellos de los cuales usted ya posee un conocimiento previo.\n\n"+"Prosiguiendo al tema principal de inciso el cual es: Ecuaciones diferenciales ordinarias,indica que es una ecuación la cual relaciona una variable independiente (x), una función desconocida y(x), y las derivadas de (y) de diferentes órdenes, expresándose de la siguiente manera:\n"
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Image:
+                    source: 'imagenes/ecudi.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(25)
+                MDLabel:
+                    text: 'Dado a lo mencionado anteriormente, Pyhon ofrece una librería de calculo simbolico bastante útil para resolver ecuacioens diferenciales ordinarias.\n\n'+'Una ecuación de primer orden se presenta de la siguiente manera, Donde P y Q son funciones continuas de un intervalo dado:'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/ecupri.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(40) 
+                MDLabel:
+                    text: 'Si quieres ver este y muchos mas ejercicios de ecuacioens diferenciales con Python, oprime el botón ¡Aquí!'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDRaisedButton:
+                    text: "¡Click Aquí!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('apliEDO','next')
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Aplicación de Ecuaciones Diferenciales[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'En base a lo anterior, en las ecuaciones diferenciales se encuentran algunas aplicaciones e ilustraciones que se pueden demostrar gracias a Python, el siguiente cuadro nos muestra una parte de lo que vamos a encontrar: '
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][i][color=506E84]Sistema masa resorte amortiguación[/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'El sistema masa resorte amortiguación, es un sistema típico utilizado para demostrar e ilustrar modelado y simulación. '
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                Image:
+                    source: 'imagenes/sismasaresorte.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(280)
+
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][i][color=506E84]Ecuación de Batman[/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Para hacer un poco mas dinamica e interesante la aplicación móvil SimulaSS, se decide implementar un ejercicio bastante interesante como lo es la ecuación de batman. Esta ejercicio proviene de fuentes de internet, el cual nos indica: \n\n'+'La ecuación de batman fue creada por el profesor de matemáticas Matthew Register y se popularizó a través de un post de uno de sus alumnos en la red social reddit; su expresión matemática es la siguiente:' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]  
+                Image:
+                    source: 'imagenes/ecubatmanone.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(300)
+
+                MDLabel:
+                    text: 'Si bien a simple vista la ecuación parece sumamente compleja e imposible de graficar, la misma se puede descomponer en seis curvas distintas, mucho más simples, donde a cada ecuación se le asigna una función diferente para graficar cada curva.' 
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+
+                Image:
+                    source: 'imagenes/batiseñal.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(200)
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Interacción EDO[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][i][color=506E84]Circuito RLC[/color][/ref][/i][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+                MDLabel:
+                    text: 'Circuito RLC en serie consiste de una fuente de entrada, una resistencia R, un inductor L y un condensador C, se desea encontrar la ecuación diferencial la cual permita calcular la carga en el circuito como la corriente que fluye por el circuito. '
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                Image:
+                    source: 'imagenes/circuitorlc.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(200)
+                MDLabel:
+                    text: 'Si deseas ver e interactuar con estos ejercicios realizados con el lenguaje de programación Python, lo mejor será que des ¡Click Aquí!'
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDRaisedButton:
+                    text: "¡Click Aquí!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .4
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('apliEDO','next')
+
+                MDLabel:
+                    text: "Cabe recalcar, que para relizar ejercicios acerca de ecuaciones diferenciales en Python, se debe implementar la librería SymPy, la cual ofrece los modulos Eq, dsolve, init_printing, symbols, Function para resolver ecuaciones diferenciales en cualquier orden.\n\n"+"No olvides que en la siguiente versión de SimulaSS llegará con mas información sobre Ecuaciones diferenciales enfocado precisamente en Señales, Sistems y Control."
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]    
+
+
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Continua experimentando toda la información que puede brindarte SimulaSS![/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(16)
+    AccordionItem:
+        title: '<---'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 20
+                spacing: 20
+                size_hint_y: None
+                height: self.minimum_height
+                Image:
+                    source: 'imagenes/home.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(50)
+                MDRaisedButton:
+                    text: "Inicio"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('index','previous')
+                MDRaisedButton:
+                    text: "Menú"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('menu','previous')
+                Image:
+                    source: 'imagenes/metodosnum.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(200) 

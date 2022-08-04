@@ -1,0 +1,285 @@
+<ScreenManager>:
+    IndexScreen:
+        name: "index"
+
+    AcercaWindow:
+        name: "acerca"
+
+    MenuWindow:
+        name: "menu"
+
+    SmalgyecuScreen:
+        name: "submenuecudifalglin"
+
+    ApliEDOScreen:
+        name: "apliEDO"
+    
+    SenalesySistemasScreen:
+        name: "submenusenales"
+
+    ExSenales:
+        name: "exsenales"
+
+    ExSistemas:
+        name: "exsistemas"
+
+    ExopMatricial:
+        name: "exerciceopmat"
+
+    FormulacionWindow:
+        name: "formulacion"
+
+    SubmenucontrolWindow:
+        name: "submenucontrol"
+
+<IndexScreen>:
+    MDBoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title:'Inicio'
+            md_bg_color: (.7,.7,.7,1)
+            size_hint_y: .1
+
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint_y: .9
+            padding: dp(30)
+            spacing: dp(20)
+
+            Image:
+                source: 'imagenes/logomenu.png'
+                allow_stretch: True
+                keep_ratio: True
+
+            MDLabel:
+                markup: True
+                halign: 'center'
+                text: '[color=#2E4053]Bienvenido a SimulaSS, donde puedes afianzar tus conocimientos en Señales, Sistemas y Control [/color][/ref]'
+                font_style: 'H6'
+
+            MDLabel:
+                markup: True
+                halign: 'center'
+                text: '[i][color=34495E]¡Disfruta e interactua\ncon su contenido![/color][/ref][/i]'
+                font_style: 'H5'
+
+            MDRaisedButton:
+                text: "Menú P."
+                font_style: "Subtitle2"
+                pos_hint: {'center_x':0.5}
+                size_hint_x: .4
+                size_hint_y: None
+                height: dp(3)
+                background_color: (48/255.84/255,150/255,1)
+                on_release:
+                    app.navigation('menu','next')
+
+            MDRaisedButton:
+                text: "Acerca de SimulaSS"
+                font_style: "Subtitle2"
+                pos_hint: {'center_x': .5}
+                size_hint_x: .4
+                size_hint_y: None
+                height: dp(3)
+                on_release:
+                    app.navigation('acerca', 'next')
+
+            MDLabel:
+                font_size: dp(12)
+                markup: True
+                text: "[i][b][color=492DFA]autor: anfejive[/color][/ref][/b][/i]"
+                halign: "center"
+                size_hint_y: None
+                height: self.texture_size[1]   
+        MDBottomAppBar:
+            size_hint_y: .1
+            MDToolbar:
+                title: "SimulaSS"
+                icon: "imagenes/logo.png"
+                type: "bottom"
+                md_bg_color: (.7,.7,.7,1)
+                mode: "end"
+
+<AcercaWindow>:
+    MDBoxLayout:
+        orientation:'vertical'
+        MDToolbar:
+            title:'SimulaSS'
+            right_action_items:[['logout',lambda x: app.navigation('index', 'previous')]]
+            md_bg_color: (.7,.7,.7,1)
+            size_hint_y: .1
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                orientation: "vertical"
+                spacing: dp(30)
+                padding: [dp(10), dp(30)]
+                Image:
+                    source: 'imagenes/logomenu.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(80)  
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]¿Que es SimulaSS?[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'SimulaSS es una aplicación desarrollada en el lenguaje de programación orientado a objetos Python, usando el framework Kivy y algunas librerías de calculo cientifico como lo es: NumPy, SciPy, SymPy y Matplotlib.\n\n' + 'Acá encuentras información acerca de Señales, Sistemas y Control y como gracias a Python se puede interactuar con algunos ejercicios y simular su respuesta.'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'Antes de continuar, el usuario debe tener una comprensión básica de cálculo diferencial e integral, límites y un conocimiento adecuado de las matemáticas. En SimulaSS, se habla sobre los inicios del Algebra Lineal y Ecuaciones diferenciales como métodos numéricos, pero a medida que se vaya actualizando la aplicación se va incluyendo nuevo contenido para afianzar aún más tus conocimientos.'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                    
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]¿A quien va dirigida principalmente?[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'SimulaSS va dirigida principalmente a estudiantes de la Universidad Antonio Nariño del programa de Ingeniería Electrónica en las asignatura de Señales, Sistemas y Control.\n\n'+'Pero cualquier persona que desee afianzar sus conocimientos en las asignaturas mencionadas puede hacerlo sin ningún inconveniente.'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "left"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'El uso de esta aplicación móvil en su primer version es offline'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]~Autor~[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text_size: self.width, None
+                    halign: "center"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    text:
+                        'Andrés Felipe Jiménez \n\n'+'Estudiante de Ingeniería Electrónica \n\n'+'Ibagué - Colombia \n\n'+'2022'
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1] 
+                MDRaisedButton:
+                    text: "Volver"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .5
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('index', 'previous')
+
+        
+        MDBottomAppBar:
+            size_hint_y: .1
+            MDToolbar:
+                title: "SimulaSS"
+                icon: "imagenes/logo.png"
+                type: "bottom"
+                md_bg_color: (.7,.7,.7,1)
+                mode: "end"
+
+<MenuWindow>:
+    MDBoxLayout:
+        orientation:'vertical'
+        MDToolbar:
+            title:'Menú'
+            right_action_items:[['logout',lambda x: app.navigation('index', 'previous')]]
+            md_bg_color: (.7,.7,.7,1)
+            size_hint_y: .1
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint_y: .8
+            spacing: dp(30)
+            padding: [0, dp(30)]
+
+            Image:
+                source: 'imagenes/signal.png'
+                allow_stretch: True
+                keep_ratio: True
+                size_hint_y: None
+                height: dp(150)
+
+            MDRaisedButton:
+                text: "Métodos númericos"
+                font_size: dp(16)
+                size_hint_x: .4
+                size_hint_y: None
+                height: dp(3)
+                pos_hint: {'center_x':0.5}
+                on_release :
+                    app.navigation('submenuecudifalglin', 'next')
+
+            MDRaisedButton:
+                text: "Señales y Sistemas"
+                font_size: dp(16)
+                size_hint_x: .4
+                size_hint_y: None
+                height: dp(3)
+                pos_hint: {'center_x':0.5}
+                on_release :
+                    app.navigation('submenusenales', 'next')
+
+            MDRaisedButton:
+                text: "Teoría de Control"
+                font_size: dp(16)
+                size_hint_x: .4
+                size_hint_y: None
+                height: dp(3)
+                pos_hint: {'center_x':0.5}
+                on_release :
+                    app.navigation('submenucontrol', 'next')
+
+            MDRaisedButton:
+                text: "Ejercicios Interactivos"
+                font_size: dp(16)
+                size_hint_x: .4
+                size_hint_y: None
+                height: dp(3)
+                pos_hint: {'center_x':0.5}
+                on_release :
+                    app.navigation('formulacion', 'next')
+
+        MDBottomAppBar:
+            size_hint_y: .1
+            MDToolbar:
+                title: "SimulaSS"
+                icon: "imagenes/logo.png"
+                type: "bottom"
+                md_bg_color: (.7,.7,.7,1)
+                mode: "end"

@@ -1,0 +1,273 @@
+<ExopMatricial>
+    orientation: 'vertical'
+    AccordionItem:
+        title: 'Representación de matrices usando Python'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Matriz[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'NumPy es una librería la cual proporciona Python, donde esta contiene algunos módulos para crear matrices como lo es la función np.array. El siguiente ejemplo muestra una matriz de números enteros, flotantes y complejos'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    text: 'Para observar el ejercicio generico, da ¡Click Aquí!'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]    
+                MDLabel:
+                    id: ejercicio_demostrativo_matriz
+                    text: ''
+                    markup: True
+                    text_size: self.width, None
+                    halign: "center"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                MDRaisedButton:
+                    text: "¡Click Aquí!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .4
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        root.ejercicio_demostrativo('ejercicio_demostrativo_matriz')
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Nota: En la siguiente versión de SimulaSS, el usuario podrá ingresar sus parametros e identificar su matriz. [/color][/ref][/b]'
+                    font_size: dp(12)
+    AccordionItem:
+        title: 'Igualdad de matrices usando Python'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Igualdad de matrices[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'Dos matrices son iguales cuando tienen la misma dirección y factores las cuales ocupan el mismo lugar. Desde el punto de vista del lenguaje de programación Python, dando uso de sus librerías, obtenemos Numpy. El cual nos presenta diversas maneras de comprobar la igualdad de dos matrices, y para este caso se utiliza la función np. equal (), esta genera una salida con valores boléanos (verdadero o falso), verificando si los elementos de las matrices son iguales.'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    text: 'Para observar un ejercicio generico sobre igualdad de matrices, da ¡Click Aquí!'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]    
+                MDLabel:
+                    id: ejercicio_demostrativo_igualdad_matriz
+                    text: ''
+                    markup: True
+                    text_size: self.width, None
+                    halign: "center"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                MDRaisedButton:
+                    text: "¡Click Aquí!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .4
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        root.ejercicio_demostrativo('ejercicio_demostrativo_igualdad_matriz')
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Nota: En la siguiente versión de SimulaSS, el usuario podrá ingresar sus parametros e identificar su matriz. [/color][/ref][/b]'
+                    font_size: dp(12)
+    AccordionItem:
+        title: 'Suma y resta de matrices usando Python'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Suma y resta de matrices[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'En este ejemplo básico de suma y resta de matrices, se deben tener en cuenta unos aspectos y es que siempre que las dimensiones de dos matrices sean las mismas se puede proceder a resolver las operaciones, a continuación, un claro ejemplo de la suma y resta de matrices con Python.'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    text: 'Para observar un ejercicio generico sobre suma y resta de matrices, da ¡Click Aquí!'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]    
+                MDLabel:
+                    id: ejercicio_demostrativo_operacion_matriz
+                    text: ''
+                    markup: True
+                    text_size: self.width, None
+                    halign: "center"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                MDRaisedButton:
+                    text: "¡Click Aquí!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .6
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        root.ejercicio_demostrativo('ejercicio_demostrativo_operacion_matriz')
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Nota: En la siguiente versión de SimulaSS, el usuario podrá ingresar sus parametros e identificar su matriz. [/color][/ref][/b]'
+                    font_size: dp(12)
+    AccordionItem:
+        title: 'Multiplicación de matrices usando Python'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 30
+                spacing: 30
+                size_hint_y: None
+                height: self.minimum_height
+                MDLabel:
+                    markup: True
+                    halign: 'center'
+                    text: '[b][color=506E84]Mulyiplicación de  matrices[/color][/ref][/b]'
+                    font_name:'Arial'
+                    font_size: dp(18)
+                MDLabel:
+                    text: 'Para multiplicar dos matrices en python usando el producto de filas por columnas, use la función dot del módulo numpy.'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]
+                MDLabel:
+                    text: 'Para observar un ejercicio generico sobre multiplicación de matrices, da ¡Click Aquí!'
+                    halign: "left"
+                    size_hint_y: None
+                    font_name:'Arial'
+                    font_size: dp(14)
+                    height: self.texture_size[1]    
+                MDLabel:
+                    id: ejercicio_demostrativo_multiplicacion_matriz
+                    text: ''
+                    markup: True
+                    text_size: self.width, None
+                    halign: "center"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                MDRaisedButton:
+                    text: "¡Click Aquí!"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .6
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        root.ejercicio_demostrativo('ejercicio_demostrativo_multiplicacion_matriz')
+                MDLabel:
+                    markup: True
+                    halign: 'left'
+                    text: '[b][color=506E84]Nota: En la siguiente versión de SimulaSS, el usuario podrá ingresar sus parametros e identificar su matriz. [/color][/ref][/b]'
+                    font_size: dp(12)
+    AccordionItem:
+        title: '<---'
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            MDBoxLayout:
+                orientation: "vertical"
+                padding: 20
+                spacing: 20
+                size_hint_y: None
+                height: self.minimum_height
+                Image:
+                    source: 'imagenes/home.png'
+                    allow_stretch: True
+                    keep_ratio: True
+                    size_hint_y: None
+                    height: dp(50)
+                MDRaisedButton:
+                    text: "Inicio"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('index','previous')
+                MDRaisedButton:
+                    text: "Volver"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('submenuecudifalglin','previous')
+                MDRaisedButton:
+                    text: "Menú"
+                    font_style: "Subtitle2"
+                    pos_hint: {'center_x':0.5}
+                    size_hint_x: .3
+                    size_hint_y: None
+                    height: dp(3)
+                    on_release:
+                        app.navigation('menu','previous')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

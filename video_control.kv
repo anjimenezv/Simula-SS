@@ -1,0 +1,31 @@
+<VideoControl>:
+    orientation: 'vertical'
+    AccordionItem:
+        title: 'Ver Video'
+        VideoPlayer:
+            source: 'videos/Pendulo_invertido.mp4'
+            options: {'allow_stretch': True}
+    AccordionItem:
+        title: '<---'
+        MDBoxLayout:
+            padding: dp(30)
+            spacing: dp(20)
+            size_hint_y: .2
+            MDRaisedButton:
+                text: "Menú"
+                font_style: "Subtitle2"
+                pos_hint: {'center_x':0.5}
+                size_hint_x: .5
+                size_hint_y: None
+                height: dp(3)
+                on_release:
+                    app.navigation('menu','previous')
+            MDRaisedButton:
+                text: "Volver"
+                font_style: "Subtitle2"
+                pos_hint: {'center_x':0.5}
+                size_hint_x: .5
+                size_hint_y: None
+                height: dp(3)
+                on_release:
+                    app.navigation('submenucontrol','previous')
